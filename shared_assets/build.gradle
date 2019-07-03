@@ -24,11 +24,5 @@ android {
 
 dependencies {
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
-
-    api('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') { transitive = true }
-    api "com.google.firebase:firebase-core:${versions.firebaseCore}"
-
-    api "com.google.android.gms:play-services-location:${versions.playServices}"
-    api "com.google.android.gms:play-services-wearable:${versions.playServices}"
     api "androidx.legacy:legacy-support-v13:${versions.androidX}"
 }

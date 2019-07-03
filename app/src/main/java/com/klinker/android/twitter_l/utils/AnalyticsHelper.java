@@ -3,7 +3,6 @@ package com.klinker.android.twitter_l.utils;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.klinker.android.twitter_l.settings.AppSettings;
 
 public class AnalyticsHelper {
@@ -33,7 +32,7 @@ public class AnalyticsHelper {
 
     private static void logEvent(Context context, String event, Bundle bundle) {
         bundle.putString("screenname", AppSettings.getInstance(context).myScreenName);
-        FirebaseAnalytics.getInstance(context).logEvent(event, bundle);
+//        FirebaseAnalytics.getInstance(context).logEvent(event, bundle);
     }
 
     public static void startLogin(Context context) {

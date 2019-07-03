@@ -21,9 +21,9 @@ import android.content.Context;
 import androidx.legacy.app.FragmentPagerAdapter;
 
 import com.klinker.android.twitter_l.R;
-import com.klinker.android.twitter_l.activities.drawer_activities.discover.NearbyTweets;
+//import com.klinker.android.twitter_l.activities.drawer_activities.discover.NearbyTweets;
 import com.klinker.android.twitter_l.activities.drawer_activities.discover.people.CategoryFragment;
-import com.klinker.android.twitter_l.activities.drawer_activities.discover.trends.LocalTrends;
+//import com.klinker.android.twitter_l.activities.drawer_activities.discover.trends.LocalTrends;
 import com.klinker.android.twitter_l.activities.drawer_activities.discover.trends.WorldTrends;
 
 public class TrendsPagerAdapter extends FragmentPagerAdapter {
@@ -38,15 +38,15 @@ public class TrendsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int i) {
         switch (i) {
-            case 0:
-                LocalTrends local = new LocalTrends();
-                return local;
+//            case 0:
+//                LocalTrends local = new LocalTrends();
+//                return local;
             case 1:
                 WorldTrends world = new WorldTrends();
                 return world;
-            case 2:
-                NearbyTweets nearby = new NearbyTweets();
-                return nearby;
+//            case 2:
+//                NearbyTweets nearby = new NearbyTweets();
+//                return nearby;
             case 3:
                 CategoryFragment people = new CategoryFragment();
                 return people;

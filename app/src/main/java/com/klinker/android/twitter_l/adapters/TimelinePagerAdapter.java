@@ -30,7 +30,6 @@ import com.klinker.android.twitter_l.activities.main_fragments.home_fragments.ex
 import com.klinker.android.twitter_l.activities.main_fragments.home_fragments.HomeFragment;
 import com.klinker.android.twitter_l.activities.main_fragments.home_fragments.extentions.LinksFragment;
 import com.klinker.android.twitter_l.activities.main_fragments.home_fragments.extentions.PicFragment;
-import com.klinker.android.twitter_l.activities.main_fragments.other_fragments.trends.LocalTrendsFragment;
 import com.klinker.android.twitter_l.activities.main_fragments.other_fragments.trends.WorldTrendsFragment;
 import com.klinker.android.twitter_l.utils.SystemBarVisibility;
 import java.util.ArrayList;
@@ -108,10 +107,10 @@ public class TimelinePagerAdapter extends FragmentPagerAdapter {
                     frags.add(new WorldTrendsFragment());
                     names.add(context.getString(R.string.world_trends));
                     break;
-                case AppSettings.PAGE_TYPE_LOCAL_TRENDS:
-                    frags.add(new LocalTrendsFragment());
-                    names.add(context.getString(R.string.local_trends));
-                    break;
+//                case AppSettings.PAGE_TYPE_LOCAL_TRENDS:
+//                    frags.add(new LocalTrendsFragment());
+//                    names.add(context.getString(R.string.local_trends));
+//                    break;
                 case AppSettings.PAGE_TYPE_SAVED_SEARCH:
                     Fragment f = new SavedSearchFragment();
                     Bundle b = new Bundle();

@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'io.fabric'
 
 android {
 
@@ -111,5 +110,3 @@ dependencies {
     implementation project(':searchview')
     implementation project(':shared_assets')
 }
-
-apply plugin: 'com.google.gms.google-services'

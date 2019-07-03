@@ -69,9 +69,6 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.github.ajalt.reprint.core.Reprint;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationServices;
 import com.klinker.android.twitter_l.R;
 import com.klinker.android.twitter_l.activities.GiphySearch;
 import com.klinker.android.twitter_l.data.ThemeColor;
@@ -121,13 +118,13 @@ import twitter4j.*;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 public abstract class Compose extends Activity implements
-        GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener,
+//        GoogleApiClient.ConnectionCallbacks,
+//        GoogleApiClient.OnConnectionFailedListener,
         InputConnectionCompat.OnCommitContentListener {
 
     private static final boolean DEBUG = false;
 
-    public GoogleApiClient mGoogleApiClient;
+//    public GoogleApiClient mGoogleApiClient;
     public AppSettings settings;
     public Context context;
     public SharedPreferences sharedPrefs;
@@ -241,13 +238,13 @@ public abstract class Compose extends Activity implements
     };
 
     protected synchronized void buildGoogleApiClient() {
-        mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this)
-                .addApi(LocationServices.API)
-                .build();
-
-        mGoogleApiClient.connect();
+//        mGoogleApiClient = new GoogleApiClient.Builder(this)
+//                .addConnectionCallbacks(this)
+//                .addOnConnectionFailedListener(this)
+//                .addApi(LocationServices.API)
+//                .build();
+//
+//        mGoogleApiClient.connect();
     }
 
     @Override
@@ -872,33 +869,33 @@ public abstract class Compose extends Activity implements
 
     Location mLastLocation;
 
-    @Override
-    public void onConnected(Bundle bundle) {
-        Log.v("location", "connected");
-        try {
-            mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
-                    mGoogleApiClient);
-        } catch (Exception e) {
-
-        }
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-
-    }
-
-    @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {
-        //Toast.makeText(context, getResources().getString(R.string.error), Toast.LENGTH_SHORT).show();
-        Log.v("location", "failed");
-    }
-
-    @Override
-    public void onStop() {
-        mGoogleApiClient.disconnect();
-        super.onStop();
-    }
+//    @Override
+//    public void onConnected(Bundle bundle) {
+//        Log.v("location", "connected");
+//        try {
+//            mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+//                    mGoogleApiClient);
+//        } catch (Exception e) {
+//
+//        }
+//    }
+//
+//    @Override
+//    public void onConnectionSuspended(int i) {
+//
+//    }
+//
+//    @Override
+//    public void onConnectionFailed(ConnectionResult connectionResult) {
+//        //Toast.makeText(context, getResources().getString(R.string.error), Toast.LENGTH_SHORT).show();
+//        Log.v("location", "failed");
+//    }
+//
+//    @Override
+//    public void onStop() {
+//        mGoogleApiClient.disconnect();
+//        super.onStop();
+//    }
 
     private void startUcrop(Uri sourceUri) {
         try {
